@@ -295,6 +295,15 @@ body {
     margin-top: 60px;
 }
 
+.activities-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--light-text);
+    max-width: 800px;
+    margin: 0 auto 60px;
+    line-height: 1.8;
+}
+
 .activity-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
