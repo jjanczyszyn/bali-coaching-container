@@ -201,6 +201,34 @@ body {
     margin-bottom: 20px;
 }
 
+.facilitators-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.facilitators-list li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.facilitators-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.facilitators-list li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
 /* Destination Sections */
 .destination {
     padding: 100px 0;
