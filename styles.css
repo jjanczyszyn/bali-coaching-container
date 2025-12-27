@@ -379,8 +379,13 @@ body {
 .activity-image img {
     width: 100%;
     height: 100%;
+    min-height: 300px;
+    max-height: 400px;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.5s ease;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .activity-card:hover .activity-image img {
