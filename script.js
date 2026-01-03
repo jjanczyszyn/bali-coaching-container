@@ -124,3 +124,43 @@ window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     }, 100);
 });
+// Lightbox functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    // Get all clickable images
+    const clickableImages = document.querySelectorAll(
+        '.main-image, .image-grid img, .chef-main-image, .chef-meal-grid img'
+    );
+
+    // Add click event to all images
+    clickableImages.forEach(img => {
+        img.addEventListener('click', function() {
+            lightbox.style.display = 'block';
+            lightboxImg.src = this.src;
+            lightboxCaption.textContent = this.alt || '';
+        });
+    });
+
+    // Close lightbox when clicking the X
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.style.display === 'block') {
+            lightbox.style.display = 'none';
+        }
+    });
+});
