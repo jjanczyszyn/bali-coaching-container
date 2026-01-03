@@ -885,3 +885,143 @@ body {
         padding: 15px;
     }
 }
+
+/* Wellness Section */
+.wellness-section {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, var(--white) 0%, var(--warm-sand) 50%, var(--white) 100%);
+}
+
+.wellness-content {
+    margin-top: 60px;
+}
+
+.wellness-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px var(--shadow);
+}
+
+.wellness-images {
+    display: grid;
+    gap: 10px;
+}
+
+.wellness-main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.wellness-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.wellness-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.wellness-grid img:hover {
+    transform: scale(1.05);
+}
+
+.wellness-details {
+    padding: 40px;
+}
+
+.wellness-details h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.wellness-details > p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 35px;
+}
+
+.wellness-feature {
+    margin-bottom: 30px;
+}
+
+.wellness-feature:last-child {
+    margin-bottom: 0;
+}
+
+.wellness-feature h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--ocean-blue);
+    margin-bottom: 15px;
+}
+
+.wellness-list {
+    list-style: none;
+    padding: 0;
+}
+
+.wellness-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #efefef;
+    color: var(--light-text);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.wellness-list li:last-child {
+    border-bottom: none;
+}
+
+.wellness-list li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Responsive adjustments for wellness section */
+@media (max-width: 768px) {
+    .wellness-details {
+        padding: 30px;
+    }
+
+    .wellness-main-image {
+        height: 400px;
+    }
+
+    .wellness-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wellness-grid img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wellness-main-image {
+        height: 300px;
+    }
+
+    .wellness-grid img {
+        height: 180px;
+    }
+
+    .wellness-details {
+        padding: 25px;
+    }
+
+    .wellness-feature h4 {
+        font-size: 1.3rem;
+    }
+}
