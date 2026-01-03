@@ -229,6 +229,100 @@ body {
     font-weight: 600;
 }
 
+/* Chef Section */
+.chef-section {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, var(--white) 0%, var(--warm-sand) 50%, var(--white) 100%);
+}
+
+.chef-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 60px;
+}
+
+.chef-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chef-main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.chef-meal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.chef-meal-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.chef-meal-grid img:hover {
+    transform: scale(1.05);
+}
+
+.chef-details h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.chef-details p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin-bottom: 25px;
+}
+
+.chef-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.chef-features li {
+    padding: 15px 0;
+    border-bottom: 1px solid #efefef;
+    color: var(--light-text);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.chef-features li:last-child {
+    border-bottom: none;
+}
+
+.chef-features li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.chef-note {
+    background: rgba(44, 95, 45, 0.05);
+    padding: 25px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    font-style: italic;
+    margin-top: 30px;
+}
+
 /* Destination Sections */
 .destination {
     padding: 100px 0;
@@ -642,6 +736,15 @@ body {
     .accommodation-details {
         padding: 30px;
     }
+
+    .chef-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .chef-meal-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
@@ -663,5 +766,13 @@ body {
 
     .activity-content h4 {
         font-size: 1.5rem;
+    }
+
+    .chef-meal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chef-main-image {
+        height: 250px;
     }
 }
